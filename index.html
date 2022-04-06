@@ -15,470 +15,476 @@
 <body>
     
     <div class="resistencia">
-        <div class="cable"></div>
-        <div class="orilla"></div>
-        <div class="separador"></div>
-        <div class="resistencia-elemento" id="banda1"></div>
-        <div class="separador"></div>
-        <div class="resistencia-elemento" id="banda2"></div>
-        <div class="separador"></div>
-        <div class="resistencia-elemento" id="banda3"></div>
-        <div class="separador"></div>
-        <div class="resistencia-elemento" id="multiplicador"></div>
-        <div class="separador"></div>
-        <div class="separador"></div>
-        <div class="resistencia-elemento" id="tolerancia"></div>
-        <div class="separador"></div>
-        <div class="orilla"></div>
-        <div class="cable"></div>
+        <div class="resistencia-dibujo">
+            <div class="cable"></div>
+            <div class="orilla"></div>
+            <div class="separador"></div>
+            <div class="resistencia-elemento" id="banda1"></div>
+            <div class="separador"></div>
+            <div class="resistencia-elemento" id="banda2"></div>
+            <div class="separador"></div>
+            <div class="resistencia-elemento" id="banda3"></div>
+            <div class="separador"></div>
+            <div class="resistencia-elemento" id="multiplicador"></div>
+            <div class="separador"></div>
+            <div class="separador"></div>
+            <div class="resistencia-elemento" id="tolerancia"></div>
+            <div class="separador"></div>
+            <div class="orilla"></div>
+            <div class="cable"></div>
+        </div>
     </div>
 
-    <!--Banda 1-->
-    <div class="select-container">
-        <div class="select-label">Banda 1</div>
-        <div class="select" id="banda1">
-            <div class="option selected" id="optionSelected1">
-                <div class="option-item option-color brown"></div>
-                <div class="option-item option-content">
-                    <div class="option-title">Marrón</div>
-                    <div class="option-value">1</div>
-                </div>
-            </div>
+    <div id="resistencia-value"></div>
 
-            <div class="options" id="options1">
-                <div class="option" id="option1">
+    <div class="selects">
+        <!--Banda 1-->
+        <div class="select-container">
+            <div class="select-label">Banda 1</div>
+            <div class="select" id="banda1">
+                <div class="option selected" id="optionSelected1">
                     <div class="option-item option-color brown"></div>
                     <div class="option-item option-content">
                         <div class="option-title">Marrón</div>
                         <div class="option-value">1</div>
                     </div>
                 </div>
-                <div class="option" id="option2">
-                    <div class="option-item option-color red"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Rojo</div>
-                        <div class="option-value">2</div>
-                    </div>
-                </div>
-                <div class="option" id="option3">
-                    <div class="option-item option-color orange"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Naranja</div>
-                        <div class="option-value">3</div>
-                    </div>
-                </div>
-                <div class="option" id="option4">
-                    <div class="option-item option-color yellow"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Amarillo</div>
-                        <div class="option-value">4</div>
-                    </div>
-                </div>
-                <div class="option" id="option5">
-                    <div class="option-item option-color green"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Verde</div>
-                        <div class="option-value">5</div>
-                    </div>
-                </div>
-                <div class="option" id="option6">
-                    <div class="option-item option-color blue"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Azul</div>
-                        <div class="option-value">6</div>
-                    </div>
-                </div>
-                <div class="option" id="option7">
-                    <div class="option-item option-color violet"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Violeta</div>
-                        <div class="option-value">7</div>
-                    </div>
-                </div>
-                <div class="option" id="option8">
-                    <div class="option-item option-color gray"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Gris</div>
-                        <div class="option-value">8</div>
-                    </div>
-                </div>
-                <div class="option" id="option9">
-                    <div class="option-item option-color white"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Blanco</div>
-                        <div class="option-value">9</div>
-                    </div>
-                </div>
-            </div>            
-        </div>
-    </div>
 
-    <!--Banda 2-->
-    <div class="select-container">
-        <div class="select-label">Banda 2</div>
-        <div class="select" id="banda2">
-            <div class="option selected" id="optionSelected2">
-                <div class="option-item option-color black"></div>
-                <div class="option-item option-content">
-                    <div class="option-title">Negro</div>
-                    <div class="option-value">0</div>
-                </div>
+                <div class="options" id="options1">
+                    <div class="option" id="option1">
+                        <div class="option-item option-color brown"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Marrón</div>
+                            <div class="option-value">1</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option2">
+                        <div class="option-item option-color red"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Rojo</div>
+                            <div class="option-value">2</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option3">
+                        <div class="option-item option-color orange"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Naranja</div>
+                            <div class="option-value">3</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option4">
+                        <div class="option-item option-color yellow"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Amarillo</div>
+                            <div class="option-value">4</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option5">
+                        <div class="option-item option-color green"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Verde</div>
+                            <div class="option-value">5</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option6">
+                        <div class="option-item option-color blue"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Azul</div>
+                            <div class="option-value">6</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option7">
+                        <div class="option-item option-color violet"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Violeta</div>
+                            <div class="option-value">7</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option8">
+                        <div class="option-item option-color gray"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Gris</div>
+                            <div class="option-value">8</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option9">
+                        <div class="option-item option-color white"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Blanco</div>
+                            <div class="option-value">9</div>
+                        </div>
+                    </div>
+                </div>            
             </div>
+        </div>
 
-            <div class="options" id="options2">
-                <div class="option" id="option0">
+        <!--Banda 2-->
+        <div class="select-container">
+            <div class="select-label">Banda 2</div>
+            <div class="select" id="banda2">
+                <div class="option selected" id="optionSelected2">
                     <div class="option-item option-color black"></div>
                     <div class="option-item option-content">
                         <div class="option-title">Negro</div>
                         <div class="option-value">0</div>
                     </div>
                 </div>
-                <div class="option" id="option1">
-                    <div class="option-item option-color brown"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Marrón</div>
-                        <div class="option-value">1</div>
-                    </div>
-                </div>
-                <div class="option" id="option2">
-                    <div class="option-item option-color red"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Rojo</div>
-                        <div class="option-value">2</div>
-                    </div>
-                </div>
-                <div class="option" id="option3">
-                    <div class="option-item option-color orange"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Naranja</div>
-                        <div class="option-value">3</div>
-                    </div>
-                </div>
-                <div class="option" id="option4">
-                    <div class="option-item option-color yellow"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Amarillo</div>
-                        <div class="option-value">4</div>
-                    </div>
-                </div>
-                <div class="option" id="option5">
-                    <div class="option-item option-color green"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Verde</div>
-                        <div class="option-value">5</div>
-                    </div>
-                </div>
-                <div class="option" id="option6">
-                    <div class="option-item option-color blue"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Azul</div>
-                        <div class="option-value">6</div>
-                    </div>
-                </div>
-                <div class="option" id="option7">
-                    <div class="option-item option-color violet"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Violeta</div>
-                        <div class="option-value">7</div>
-                    </div>
-                </div>
-                <div class="option" id="option8">
-                    <div class="option-item option-color gray"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Gris</div>
-                        <div class="option-value">8</div>
-                    </div>
-                </div>
-                <div class="option" id="option9">
-                    <div class="option-item option-color white"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Blanco</div>
-                        <div class="option-value">9</div>
-                    </div>
-                </div>
-            </div>            
-        </div>
-    </div>
 
-    <!--Banda 3-->
-    <div class="select-container">
-        <div class="select-label">Banda 3</div>
-        <div class="select" id="banda3">
-            <div class="option selected" id="optionSelected3">
-                <div class="option-item option-color black"></div>
-                <div class="option-item option-content">
-                    <div class="option-title">Negro</div>
-                    <div class="option-value">0</div>
-                </div>
+                <div class="options" id="options2">
+                    <div class="option" id="option0">
+                        <div class="option-item option-color black"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Negro</div>
+                            <div class="option-value">0</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option1">
+                        <div class="option-item option-color brown"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Marrón</div>
+                            <div class="option-value">1</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option2">
+                        <div class="option-item option-color red"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Rojo</div>
+                            <div class="option-value">2</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option3">
+                        <div class="option-item option-color orange"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Naranja</div>
+                            <div class="option-value">3</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option4">
+                        <div class="option-item option-color yellow"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Amarillo</div>
+                            <div class="option-value">4</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option5">
+                        <div class="option-item option-color green"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Verde</div>
+                            <div class="option-value">5</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option6">
+                        <div class="option-item option-color blue"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Azul</div>
+                            <div class="option-value">6</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option7">
+                        <div class="option-item option-color violet"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Violeta</div>
+                            <div class="option-value">7</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option8">
+                        <div class="option-item option-color gray"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Gris</div>
+                            <div class="option-value">8</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option9">
+                        <div class="option-item option-color white"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Blanco</div>
+                            <div class="option-value">9</div>
+                        </div>
+                    </div>
+                </div>            
             </div>
+        </div>
 
-            <div class="options" id="options3">
-                <div class="option" id="option0">
+        <!--Banda 3-->
+        <div class="select-container">
+            <div class="select-label">Banda 3</div>
+            <div class="select" id="banda3">
+                <div class="option selected" id="optionSelected3">
                     <div class="option-item option-color black"></div>
                     <div class="option-item option-content">
                         <div class="option-title">Negro</div>
                         <div class="option-value">0</div>
                     </div>
                 </div>
-                <div class="option" id="option1">
-                    <div class="option-item option-color brown"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Marrón</div>
-                        <div class="option-value">1</div>
-                    </div>
-                </div>
-                <div class="option" id="option2">
-                    <div class="option-item option-color red"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Rojo</div>
-                        <div class="option-value">2</div>
-                    </div>
-                </div>
-                <div class="option" id="option3">
-                    <div class="option-item option-color orange"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Naranja</div>
-                        <div class="option-value">3</div>
-                    </div>
-                </div>
-                <div class="option" id="option4">
-                    <div class="option-item option-color yellow"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Amarillo</div>
-                        <div class="option-value">4</div>
-                    </div>
-                </div>
-                <div class="option" id="option5">
-                    <div class="option-item option-color green"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Verde</div>
-                        <div class="option-value">5</div>
-                    </div>
-                </div>
-                <div class="option" id="option6">
-                    <div class="option-item option-color blue"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Azul</div>
-                        <div class="option-value">6</div>
-                    </div>
-                </div>
-                <div class="option" id="option7">
-                    <div class="option-item option-color violet"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Violeta</div>
-                        <div class="option-value">7</div>
-                    </div>
-                </div>
-                <div class="option" id="option8">
-                    <div class="option-item option-color gray"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Gris</div>
-                        <div class="option-value">8</div>
-                    </div>
-                </div>
-                <div class="option" id="option9">
-                    <div class="option-item option-color white"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Blanco</div>
-                        <div class="option-value">9</div>
-                    </div>
-                </div>
-            </div>            
-        </div>
-    </div>
 
-    <!--Multiplicador-->
-    <div class="select-container">
-        <div class="select-label">Multiplicador</div>
-        <div class="select" id="select-multiplicador">
-            <div class="option selected" id="optionSelected4">
-                <div class="option-item option-color brown"></div>
-                <div class="option-item option-content">
-                    <div class="option-title">Marrón</div>
-                    <div class="option-value">10</div>
-                </div>
+                <div class="options" id="options3">
+                    <div class="option" id="option0">
+                        <div class="option-item option-color black"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Negro</div>
+                            <div class="option-value">0</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option1">
+                        <div class="option-item option-color brown"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Marrón</div>
+                            <div class="option-value">1</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option2">
+                        <div class="option-item option-color red"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Rojo</div>
+                            <div class="option-value">2</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option3">
+                        <div class="option-item option-color orange"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Naranja</div>
+                            <div class="option-value">3</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option4">
+                        <div class="option-item option-color yellow"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Amarillo</div>
+                            <div class="option-value">4</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option5">
+                        <div class="option-item option-color green"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Verde</div>
+                            <div class="option-value">5</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option6">
+                        <div class="option-item option-color blue"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Azul</div>
+                            <div class="option-value">6</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option7">
+                        <div class="option-item option-color violet"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Violeta</div>
+                            <div class="option-value">7</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option8">
+                        <div class="option-item option-color gray"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Gris</div>
+                            <div class="option-value">8</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option9">
+                        <div class="option-item option-color white"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Blanco</div>
+                            <div class="option-value">9</div>
+                        </div>
+                    </div>
+                </div>            
             </div>
+        </div>
 
-            <div class="options" id="options4">
-                <div class="option" id="option0">
-                    <div class="option-item option-color black"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Negro</div>
-                        <div class="option-value">1</div>
-                    </div>
-                </div>
-                <div class="option" id="option1">
+        <!--Multiplicador-->
+        <div class="select-container">
+            <div class="select-label">Multiplicador</div>
+            <div class="select" id="select-multiplicador">
+                <div class="option selected" id="optionSelected4">
                     <div class="option-item option-color brown"></div>
                     <div class="option-item option-content">
                         <div class="option-title">Marrón</div>
                         <div class="option-value">10</div>
                     </div>
                 </div>
-                <div class="option" id="option2">
-                    <div class="option-item option-color red"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Rojo</div>
-                        <div class="option-value">100</div>
-                    </div>
-                </div>
-                <div class="option" id="option3">
-                    <div class="option-item option-color orange"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Naranja</div>
-                        <div class="option-value">1k</div>
-                    </div>
-                </div>
-                <div class="option" id="option4">
-                    <div class="option-item option-color yellow"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Amarillo</div>
-                        <div class="option-value">10k</div>
-                    </div>
-                </div>
-                <div class="option" id="option5">
-                    <div class="option-item option-color green"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Verde</div>
-                        <div class="option-value">100k</div>
-                    </div>
-                </div>
-                <div class="option" id="option6">
-                    <div class="option-item option-color blue"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Azul</div>
-                        <div class="option-value">1M</div>
-                    </div>
-                </div>
-                <div class="option" id="option7">
-                    <div class="option-item option-color violet"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Violeta</div>
-                        <div class="option-value">10M</div>
-                    </div>
-                </div>
-                <div class="option" id="option8">
-                    <div class="option-item option-color gray"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Gris</div>
-                        <div class="option-value">100M</div>
-                    </div>
-                </div>
-                <div class="option" id="option9">
-                    <div class="option-item option-color white"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Blanco</div>
-                        <div class="option-value">1G</div>
-                    </div>
-                </div>
-                <div class="option" id="option10">
-                    <div class="option-item option-color gold"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Oro</div>
-                        <div class="option-value">0.1</div>
-                    </div>
-                </div>
-                <div class="option" id="option11">
-                    <div class="option-item option-color silver"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Plata</div>
-                        <div class="option-value">0.01</div>
-                    </div>
-                </div>
-            </div>            
-        </div>
-    </div>
 
-    <!--Tolerancia-->
-    <div class="select-container">
-        <div class="select-label">Tolerancia</div>
-        <div class="select" id="select-tolerancia">
-            <div class="option selected" id="optionSelected5">
-                <div class="option-item option-color brown"></div>
-                <div class="option-item option-content">
-                    <div class="option-title">Marrón</div>
-                    <div class="option-value">±1%</div>
-                </div>
+                <div class="options" id="options4">
+                    <div class="option" id="option0">
+                        <div class="option-item option-color black"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Negro</div>
+                            <div class="option-value">1</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option1">
+                        <div class="option-item option-color brown"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Marrón</div>
+                            <div class="option-value">10</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option2">
+                        <div class="option-item option-color red"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Rojo</div>
+                            <div class="option-value">100</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option3">
+                        <div class="option-item option-color orange"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Naranja</div>
+                            <div class="option-value">1k</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option4">
+                        <div class="option-item option-color yellow"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Amarillo</div>
+                            <div class="option-value">10k</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option5">
+                        <div class="option-item option-color green"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Verde</div>
+                            <div class="option-value">100k</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option6">
+                        <div class="option-item option-color blue"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Azul</div>
+                            <div class="option-value">1M</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option7">
+                        <div class="option-item option-color violet"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Violeta</div>
+                            <div class="option-value">10M</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option8">
+                        <div class="option-item option-color gray"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Gris</div>
+                            <div class="option-value">100M</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option9">
+                        <div class="option-item option-color white"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Blanco</div>
+                            <div class="option-value">1G</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option10">
+                        <div class="option-item option-color gold"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Oro</div>
+                            <div class="option-value">0.1</div>
+                        </div>
+                    </div>
+                    <div class="option" id="option11">
+                        <div class="option-item option-color silver"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Plata</div>
+                            <div class="option-value">0.01</div>
+                        </div>
+                    </div>
+                </div>            
             </div>
+        </div>
 
-            <div class="options" id="options5">
-                <div class="option" id="option1">
+        <!--Tolerancia-->
+        <div class="select-container">
+            <div class="select-label">Tolerancia</div>
+            <div class="select" id="select-tolerancia">
+                <div class="option selected" id="optionSelected5">
                     <div class="option-item option-color brown"></div>
                     <div class="option-item option-content">
                         <div class="option-title">Marrón</div>
                         <div class="option-value">±1%</div>
                     </div>
                 </div>
-                <div class="option" id="option2">
-                    <div class="option-item option-color red"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Rojo</div>
-                        <div class="option-value">±2%</div>
+
+                <div class="options" id="options5">
+                    <div class="option" id="option1">
+                        <div class="option-item option-color brown"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Marrón</div>
+                            <div class="option-value">±1%</div>
+                        </div>
                     </div>
-                </div>
-                <div class="option" id="option3">
-                    <div class="option-item option-color orange"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Naranja</div>
-                        <div class="option-value">±0.05%</div>
+                    <div class="option" id="option2">
+                        <div class="option-item option-color red"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Rojo</div>
+                            <div class="option-value">±2%</div>
+                        </div>
                     </div>
-                </div>
-                <div class="option" id="option4">
-                    <div class="option-item option-color yellow"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Amarillo</div>
-                        <div class="option-value">±0.02%</div>
+                    <div class="option" id="option3">
+                        <div class="option-item option-color orange"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Naranja</div>
+                            <div class="option-value">±0.05%</div>
+                        </div>
                     </div>
-                </div>
-                <div class="option" id="option5">
-                    <div class="option-item option-color green"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Verde</div>
-                        <div class="option-value">±0.5%</div>
+                    <div class="option" id="option4">
+                        <div class="option-item option-color yellow"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Amarillo</div>
+                            <div class="option-value">±0.02%</div>
+                        </div>
                     </div>
-                </div>
-                <div class="option" id="option6">
-                    <div class="option-item option-color blue"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Azul</div>
-                        <div class="option-value">±0.25%</div>
+                    <div class="option" id="option5">
+                        <div class="option-item option-color green"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Verde</div>
+                            <div class="option-value">±0.5%</div>
+                        </div>
                     </div>
-                </div>
-                <div class="option" id="option7">
-                    <div class="option-item option-color violet"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Violeta</div>
-                        <div class="option-value">±0.1%</div>
+                    <div class="option" id="option6">
+                        <div class="option-item option-color blue"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Azul</div>
+                            <div class="option-value">±0.25%</div>
+                        </div>
                     </div>
-                </div>
-                <div class="option" id="option8">
-                    <div class="option-item option-color gray"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Gris</div>
-                        <div class="option-value">±0.01%</div>
+                    <div class="option" id="option7">
+                        <div class="option-item option-color violet"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Violeta</div>
+                            <div class="option-value">±0.1%</div>
+                        </div>
                     </div>
-                </div>
-                <div class="option" id="option9">
-                    <div class="option-item option-color gold"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Oro</div>
-                        <div class="option-value">±5%</div>
+                    <div class="option" id="option8">
+                        <div class="option-item option-color gray"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Gris</div>
+                            <div class="option-value">±0.01%</div>
+                        </div>
                     </div>
-                </div>
-                <div class="option" id="option10">
-                    <div class="option-item option-color silver"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Plata</div>
-                        <div class="option-value">±10%</div>
+                    <div class="option" id="option9">
+                        <div class="option-item option-color gold"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Oro</div>
+                            <div class="option-value">±5%</div>
+                        </div>
                     </div>
-                </div>
-                <div class="option" id="option11">
-                    <div class="option-item option-color white"></div>
-                    <div class="option-item option-content">
-                        <div class="option-title">Ninguno</div>
-                        <div class="option-value">±20%</div>
+                    <div class="option" id="option10">
+                        <div class="option-item option-color silver"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Plata</div>
+                            <div class="option-value">±10%</div>
+                        </div>
                     </div>
-                </div>
-            </div>            
+                    <div class="option" id="option11">
+                        <div class="option-item option-color white"></div>
+                        <div class="option-item option-content">
+                            <div class="option-title">Ninguno</div>
+                            <div class="option-value">±20%</div>
+                        </div>
+                    </div>
+                </div>            
+            </div>
         </div>
     </div>
 

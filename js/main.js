@@ -1,3 +1,5 @@
+const resistenciaValue = document.querySelector('#resistencia-value');
+
 const optionSelectedBanda1 = document.querySelector('#optionSelected1');
 const optionSelectedBanda2 = document.querySelector('#optionSelected2');
 const optionSelectedBanda3 = document.querySelector('#optionSelected3');
@@ -68,6 +70,7 @@ const calcularResistencia = () => {
     numericValue*=values[bandasValues[3]].multiValue;
     const tolerancia = values[bandasValues[4]].tol;
 
+    resistenciaValue.innerHTML = `${numericValue}Ω ${tolerancia}`
     console.log(numericValue, 'Ω', tolerancia)
 }
 

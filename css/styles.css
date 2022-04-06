@@ -13,19 +13,36 @@ body{
 .select-container{
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    margin: 10px;
+
     z-index: 1;
+    width: 100%;
 }
 
 .select-label{
     margin: 10px;
+    width: 30%;
+    max-width: 200px;
+
+}
+
+.selects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .select{
-    width: 250px;
+    width: 50%;
+    max-width: 300px;
     height: 50px;
 }
 
-.options{    
+.options{   
+    width: 100%; 
+    max-width: 300px;
     display: flex;
     height: 0;
     overflow: hidden;
@@ -42,11 +59,20 @@ body{
     z-index: 999;
 }
 
+#resistencia-value{
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
 .option{
+    
     position: relative;
     z-index: 1;
     height: 50px; 
-    width: 250px;
+    
+    
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -129,8 +155,16 @@ body{
 .resistencia{
     display: flex;
     align-items: center;
-    width: 500px;
-    height: 250px;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+}
+
+.resistencia-dibujo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
 }
 
 .resistencia-elemento{

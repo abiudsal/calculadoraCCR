@@ -10,34 +10,41 @@ body{
     height: 100vh;
 }
 
+.content{
+    height: 100%;
+    width: 100%;
+}
+
+
+
 .select-container{
     display: flex;
-    align-items: center;
+
     justify-content: center;
 
-    margin: 10px;
+    margin: 10px;    
 
-    z-index: 1;
+    z-index: 0;
     width: 100%;
 }
 
 .select-label{
+    height: inherit;
     margin: 10px;
     width: 30%;
     max-width: 200px;
-
 }
 
 .selects{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .select{
     width: 50%;
-    max-width: 300px;
-    height: 50px;
+    max-width: 300px;    
 }
 
 .options{   
@@ -50,34 +57,35 @@ body{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;  
 
     background-color: white;
-    position: absolute;
-    z-index: 1;
+    
 }
 
 .options.active{
-    height: auto;
-    z-index: 999;
+    height: max-content;
 }
 
-#resistencia-value{
-    font-size: 32px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.option{
-    
+.option{    
     position: relative;
-    z-index: 1;
-    height: 50px; 
-    
+    z-index: 0;
+    height: 50px;
     
     display: flex;
     flex-direction: row;
     align-items: center;
     transition: all 0.2s ease;
     cursor: pointer;
+}
+
+.option i{
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease;    
+}
+
+.select:hover i{
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .option:hover{
@@ -151,12 +159,19 @@ body{
     background-color: #D9B377;
 }
 
+#resistencia-value{
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30px;
+}
 
 .resistencia{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 30%;
+    flex-direction: column;
+    height: 40%;    
     width: 100%;
 }
 
@@ -190,4 +205,19 @@ body{
     background-color: silver;
     height: 15px;
     width: 20px;
+}
+
+@media (min-width: 800px) {
+    .content{
+        display: grid;  
+        grid-template-columns: 50% 50%;     
+        
+        max-width: 1000px;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+
+    .resistencia{
+        height: 400px;
+    }
 }

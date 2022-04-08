@@ -34,7 +34,7 @@ const optionsBanda2 = options2.children;
 const optionsBanda3 = options3.children;
 const optionsBanda4 = options4.children;
 const optionsBanda5 = options5.children;
-const bandasValues = [1, 0, 0, 1, 1];
+const bandasValues = [1, 0, 0, 1, 10];
 
 let numBandas = 5;
 
@@ -83,6 +83,47 @@ const pintarResistencia = () => {
     }
 }
 
+const formatNumber = (num) => {
+    const text = num.toString();
+    let value = "";
+    let contadorCifras = 0;
+    let contadorDigitos = 0;
+    
+    for(let i = text.length-1; i>=0; i--){
+        contadorDigitos++;
+        if(i!== 0 && contadorDigitos===3){
+            contadorCifras++;
+            contadorDigitos=0;
+        }
+    }
+
+    if(contadorCifras===0){
+        return text;
+    }
+
+    for(let i = 0; i<contadorDigitos; i++){
+        value+=text[i];
+    }
+
+    if(text[contadorDigitos] !== '0'){
+        value+=('.'+text[contadorDigitos]);
+    }
+
+    switch(contadorCifras){
+        case 1:
+            value+='k';
+            break;
+        case 2:
+            value+='M';
+            break;
+        case 3:
+            value+='G';
+            break;
+    }
+
+    return value;
+} 
+
 const calcularResistencia = () => {    
     let value = '';
     value += values[bandasValues[0]].value;
@@ -96,8 +137,8 @@ const calcularResistencia = () => {
     numericValue*=values[bandasValues[3]].multiValue;
     const tolerancia = values[bandasValues[4]].tol;
 
-    resistenciaValue.innerHTML = `${numericValue}Ω ${tolerancia}`
-    console.log(numericValue, 'Ω', tolerancia)
+    resistenciaValue.innerHTML = `${formatNumber(numericValue)}Ω  ${tolerancia}`
+    //console.log(formatNumber(numericValue), 'Ω ', tolerancia)
 }
 
 const cambiarOpcionBanda = (event, index, banda) => {
@@ -204,6 +245,7 @@ optionSelectedTol.addEventListener('click', (event) => {
 
 selectorBandas.addEventListener("change", (event) => {
     numBandasSelected();
+    calcularResistencia();
     pintarResistencia();
 })
 
@@ -237,6 +279,6 @@ for (let i = 0; i < optionsBanda5.length; i++) {
     optionsBanda5[i].addEventListener('click',(event) => cambiarTolerancia(event, i+1))
 }
 
+numBandasSelected();
 pintarResistencia();
 calcularResistencia();
-numBandasSelected();

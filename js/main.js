@@ -1,5 +1,8 @@
 const resistenciaValue = document.querySelector('#resistencia-value');
 
+const selectorBandas = document.querySelector("#num-bandas");
+const banda3 = document.querySelector("#ocultar-banda");
+
 const optionSelectedBanda1 = document.querySelector('#optionSelected1');
 const optionSelectedBanda2 = document.querySelector('#optionSelected2');
 const optionSelectedBanda3 = document.querySelector('#optionSelected3');
@@ -33,6 +36,8 @@ const optionsBanda4 = options4.children;
 const optionsBanda5 = options5.children;
 const bandasValues = [1, 0, 0, 1, 1];
 
+let numBandas = 5;
+
 const values = [
     {value: 0, multi: '1', multiValue: 1, tol: 'none', color: 'black', name: 'Negro'},
     {value: 1, multi: '10', multiValue: 10, tol: '±1%', color: 'brown', name: 'Marrón'},
@@ -51,19 +56,40 @@ const values = [
 ]
 
 const pintarResistencia = () => {
-    for(let i = 0; i < 5; i++){
-        bandas[i].classList = "";
-        bandas[i].classList.add('resistencia-elemento');
-        bandas[i].classList.add(values[bandasValues[i]].color);
-
+    switch(numBandas){
+        case 4:
+            for(let i = 0; i < 5; i++){
+                bandas[i].classList = "";
+                bandas[i].classList.add('resistencia-elemento');
+                if(i === 2){                                        
+                    bandas[i].classList.add(values[bandasValues[i+1]].color);
+                }
+                else if(i === 3){                                        
+                    bandas[i].classList.add('default');
+                }
+                else{
+                    bandas[i].classList.add(values[bandasValues[i]].color);
+                }
+        
+            }
+            break;
+        case 5:
+            for(let i = 0; i < 5; i++){
+                bandas[i].classList = "";
+                bandas[i].classList.add('resistencia-elemento');
+                bandas[i].classList.add(values[bandasValues[i]].color);
+            }
+            break; 
     }
 }
 
-const calcularResistencia = () => {
+const calcularResistencia = () => {    
     let value = '';
     value += values[bandasValues[0]].value;
     value += values[bandasValues[1]].value;
-    value += values[bandasValues[2]].value;
+    if(numBandas > 4){
+        value += values[bandasValues[2]].value;
+    }
 
     let numericValue = parseInt(value);
 
@@ -110,6 +136,20 @@ const cambiarTolerancia = (event, index) => {
     console.log(bandasValues)
     pintarResistencia();
     calcularResistencia();
+}
+
+const numBandasSelected = () => {
+    const index = selectorBandas.selectedIndex;
+    switch(index){
+        case 0:
+            numBandas = 4;
+            banda3.style.display = "none";
+            break;
+        case 1:
+            numBandas = 5;
+            banda3.style.display = "grid";
+            break;
+    }
 }
 
 optionSelectedBanda1.addEventListener('click', (event) => {
@@ -162,6 +202,11 @@ optionSelectedTol.addEventListener('click', (event) => {
     event.stopPropagation();
 });
 
+selectorBandas.addEventListener("change", (event) => {
+    numBandasSelected();
+    pintarResistencia();
+})
+
 document.body.addEventListener('click',() => {
     options1.classList.remove('active');
     options2.classList.remove('active');
@@ -194,3 +239,4 @@ for (let i = 0; i < optionsBanda5.length; i++) {
 
 pintarResistencia();
 calcularResistencia();
+numBandasSelected();
